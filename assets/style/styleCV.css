@@ -1,0 +1,9 @@
+body{
+    background-image: url(../img/cvpage.jpg);
+    /* 100% de l'ecran du user */
+    background-repeat:no-repeat;
+    height: 250vh;
+    background-size: contain;
+
+}
+

@@ -1,142 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--le titre de la page -->
-    <title>Cours HTML</title>
-    <!-- icone de l'onglet -->
-    <link rel="shortcut icon" href="logo.html5.png" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
 
-  <body>
-    <header>
-        <!-- attention, 1 seul h1 par page !!! -->
-      <h1><span>&#9728;</span> texte - titre H1</h1>
-      <p>
-        Texte basique. <em>la tete à toto </em><strong>non non non </strong
-        ><span
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus quaerat assumenda quasi, molestiae hic dolorum ratione
-          nemo voluptas explicabo quas voluptatum quae eveniet, ea obcaecati
-          ipsa quos porro repudiandae iure deserunt est non harum fuga tempora.
-          Voluptates, aliquid ipsam. Natus.
-        </span>
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        nemo, officiis sit nulla beatae praesentium totam porro quia impedit
-        placeat amet doloribus obcaecati, nostrum ut maiores est fugit. Quas,
-        quaerat!
-      </p>
-    </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-    <section>
-      <div>
-        <h2>Photos</h2>
-        <img src="sorciere.png" height="60" alt="photo de sorciere" />
-      </div>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="icon" type="image/png" href="./assets/img/cv.png" />
 
-      <div>
-        <h3>listes - titre h3</h3>
-        <ol>
-          <li>OL=ordered list</li>
-          <li>OL=ordered list</li>
-          <li>OL=ordered list</li>
-        </ol>
-      </div>
+</head>
+<body>
 
-      <div>
-        <h4>Tableaux - titre h4</h4>
-        <table border="1" width="50%">
-          <!-- légende -->
-          <caption>
-            légende du tableau POP EUROPE
-          </caption>
-          <!-- en tete   //  OPTION SHIFT A pour com-->
-          <thead>
-            <th>pays</th>
-            <th>population</th>
-            <!-- copier la ligne SHIFT OPTION BAS -->
-          </thead>
-          <!-- corps du tableau -->
-          <tbody>
-            <tr>
-              <td>france</td>
-              <td>66M</td>
-            </tr>
-            <tr>
-              <td>usa</td>
-              <td>225M</td>
-            </tr>
-            <tr>
-              <td>Allemagne</td>
-              <td>86M</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <h5><span>&#9728;</span> ancres - titre h5</h5>
-        <!-- ancre> a href, target pour ouvrir autre fenetre, la cheat sheet pour un memo de tout html -->
-        <a href="https://www.htmlcheatsheet.com" target="_blank"
-          >html cheat code</a
-        >
-        <br />
-        <a
-          href="https://www.toptal.com/designers/htmlarrows/symbols/"
-          target="_blank"
-          >icone en html</a
-        >
-      </div>
-      <div>
-        <h6>video - titre h6</h6>
-        <video src="Sunrise.mp4" height="300" autoplay loop muted></video>
-      </div>
-    </section>
-    <!-- BR (break) - retour à la ligne -->
-    <br>
-    <section>
-        <h2>Formulaire</h2>
-        <form action="/action.php" method="post">
-            <!-- on crée un titre (label for="name") de valeur "nom" lié à une case (input) de classe "name". Dans cette case une info (type="text" placeholder=) de valeur "entrez du texte ici" -->
-            <label for="name" >Nom</label> 
-            <input id="name" type="text" placeholder="entrez du texte ici"><br>
-            <label for="age" >Age</label>
-            <!-- valeur min et max qu'on peut entrer, scroll valeur de 2 en 2, valeur par defaut 18 -->
-            <input id="age" type="number" min="5" max="55" 
-            step="2" value="21"> <br>
-            <!-- choix de genre, select id pour proposer des choix (option value) -->
-            <label for="gender">Genre</label>
-            <select id="gender">
-                <option value="man">Homme</option>
-                <option selected value="woman">Femme</option>
-            </select><br>
-            <!-- choix à cocher (<input type="radio" name="type"), un id par choix, un label for par id avec le texte à afficher -->
-            <div>
-                <input type="radio" name="type" id="human">
-                <label for="human">Humain</label>
+  <a href="mailto:votreadresse@mail.fr"><img src="./assets/img/upbutton.png" id="fixedbutton"></a>
 
-                <input type="radio" name="type" checked id="dog">
-                <label for="dog">Chien</label>
-                
-                <input type="radio" name="type" id="cat">
-                <label for="cat">Chat</label>
-            </div>
-            <!-- zone de texte d'un formulaire -->
-            <textarea cols="30" rows="10" placeholder="entrez votre demande ici"></textarea><br>
-            <!-- checkbox liée à son texte, on peut donc cliquer sur les 2 pour cocher -->
-           <label><input type="checkbox"/>Accepter les CGVs</label> <br>
-           <!-- bouton de validation du formulaire, il valide toutes les entrees et les envoie (à part) -->
-            <input type="submit" value="Valider">
-        </form>
-    </section>
-    <br>
-    <!-- mail et envoi de fichiers -->
-    <footer>
-        <a href="mailto:loic.mauvoisin@gmail.com">Envoyez moi un e-mail</a><br>
-        <a href="notice.txt" download="notice de mon site trop beau">Téléchargez la notice</a>
-    </footer>
-  </body>
+  <header>
+    <div class="container">
+      <div>
+        <h1>LOÏC MAUVOISIN</h1>
+        <h3>40 ans, basé à Conflans-Sainte-Honorine.</h3>
+        <p>Cuisinier de formation, auto-entrepreneur, j'ai aussi participé au développement d'une application mobile à succès.
+          Je poursuit aujourd'hui mon parcours dans la tech en tant que développeur web.</p>
+        <a href="cv.html" class="button">Consultez mon CV</a>
+      </div>
+    </div>
+        <div class="img-banner"></div>
+  </header>
+  
+  <section class="section-1">
+      <div class="img"></div>
+      <div class="container">
+        <div>
+          <h2>EXPÉRIENCE PROFESSIONNELLE - 2008 > 2019</h2>
+          <h3>STAGIAIRE, BRAS DROIT CEO, ASSISTANT CHEF DE PROJETS/PRODUCT OWNER APPLICATIONS WEB ET MOBILES</h3>
+          <span>MOBITEE - PARIS - FRANCE</span>
+          <p>Traitement de données et imageries satellites.<br>
+            Supervision développeurs mobile et web, designers, testeurs. Réflexion sur l'architecture et les fonctionnalités.<br>
+            Gestion des sprints et du backlog, suivi du retour client, tests, corrections et améliorations du produit...</p>
+          <a href="http://www.mobitee.com/fr/" class="button">Découvrez MOBITEE</a>
+        </div>
+      </div>
+  </section>
+
+  <section class="section-2">
+      <div class="container">
+      <div>
+      <h2>FORMATION DEVELOPPEUR WEB - 2022 > 2023</h2>
+      <h3>OPENCLASSROOMS(EN COURS) - EN LIGNE & ALTERNANCE</h3>
+      <p>Transformer une maquette en site web avec HTML & CSS. Dynamiser une page web avec des animations CSS.<br>
+        Optimiser un site web existant.<br>
+        Construire un site e-commerce en JS.<br>
+        Construire une API sécurisée pour une application d'avis. Créer un réseau social d’entreprise...<br>
+        Liste non-exhaustive des outils et technologies utilisés : node, react, mongodb, mysql, vue, api rest, owasp, express...</p>
+      <a href="https://openclassrooms.com/fr/paths/556-developpeur-web" class="button">Découvrez la formation</a>
+      </div>
+    </div>
+      <div class="img"></div>
+  </section>
+
+  <section class="contact">
+      <h2>Embauchez-moi !</h2>
+      <form action="#">
+          <div class="form-grid">
+              <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name">
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="text" id="email">
+              </div>
+              <div class="textarea">
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+              </div>
+          </div>
+          <input type="submit" class="buttonForm" value="Envoyez votre message">
+      </form>
+  </section>
+
+  <footer>
+    <p id="footerTitle">Si, si tous les liens ci-dessous fonctionnent! Cliquez, vous en saurez plus sur moi !</p>
+      <ul>
+          <li>
+              <a href="http://www.mauvoisinphotography.com">
+              <i class="fa-regular fa-at"></i>
+            </a>
+          </li>
+
+          <li>
+              <a href="https://www.instagram.com/loic.mauvoisin.photography/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+          <li>
+              <a href="http://www.linkedin.com/in/loicMauvoisin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+
+           <li>
+              <a href="mailto:votreadresse@mail.fr">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+           </li>
+      </ul>
+  </footer>
+
+  <script type="text/javascript">
+    alert('Bienvenue sur mon premier site web!');
+  </script>
+
+
+</body>
 </html>
